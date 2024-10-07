@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Share Tech", sans-serif;
+}
+
+/* colors :: 
+
+    #0a2e4c 
+
+    #bd9c4d
+*/
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url(https://img.freepik.com/premium-photo/yellow-hard-hat-architectural-blueprints_1204912-2791.jpg?w=740); */
+    /* background-image: url(https://img.freepik.com/free-photo/illustration-construction-site_23-2151850239.jpg?t=st=1728325982~exp=1728329582~hmac=b2f75f0ddb01a0ad5cd562b4691b0597903206242c034261abff22e57fab7743&w=1380);  */
+    background-image: url(https://img.freepik.com/free-photo/illustration-construction-site_23-2151850254.jpg?t=st=1728327437~exp=1728331037~hmac=e9ccbfde5573db12fa2fe403c80bf70a14bf3c87a0e45da00ccf86767b19144e&w=1380); 
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container{
+    background-color: #1818183f;
+    height: 100vh;
+}
+
+.header {
+    text-align: center;
+    height: 20vh;
+    padding: 30px;
+    color: white;
+    font-size: 30px;
+    user-select: none;
+}
+
+
+.container form {
+    left: 20%;
+    right: 20%;
+    top: 18vh;
+}
+
+.container form {
+    margin:auto;
+    padding: 30px;
+    border: transparent 1px solid;
+    border-radius: 10px;
+    width: 40%;
+    animation-name: glass;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes glass {
+    0% {
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+    }
+
+    100% {
+        background-color: transparent;
+        backdrop-filter: blur(11px);
+    }
+}
+
+
+.container form p.head {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+
+}
+
+.container form .form-body{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 12px;
+}
+
+.container form .form-body label{
+    font-size: 20px;
+    color: #FFF;
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.container form .form-body label input{
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid #0a2e4c;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 8px;
+}
+
+.container form .form-body .actions{
+    width: 100%;
+    padding: 15px;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.container form .form-body .actions button{
+    width: 38%;
+    padding: 10px;
+    border: 2px solid #0a2e4c;
+    background-color: #bd9c4d;
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.container form .form-body .actions span a{
+    color: #FFF;
+    font-size: 20px;
+
+}
