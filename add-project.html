@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="add-project.css" />
+    <title>add project</title>
+  </head>
+  <body>
+    <div class="header">
+      <header>
+        <h1>Tender</h1>
+      </header>
+      <div class="logout">
+        <p><a href="">Logout</a></p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="card md-col-5">
+          <div class="card-header mb-3">
+            <h2 class="text-center">Create project</h2>
+          </div>
+          <div class="card-body">
+            <form method="post" th:action="@{/admin/projects}" th:object="${project}">
+              <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="enter project title"
+                  th:field="*{title}"
+                />
+                <p
+                  th:if="${#fields.hasErrors('title')}"
+                  class="text-danger"
+                  th:errors="*{title}"
+                ></p>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Short Description</label>
+                <textarea
+                  class="form-control"
+                  th:field="*{shortDescription}"
+                  placeholder="enter project description"
+                  rows="2"
+                >
+                </textarea>
+                <p
+                  th:if="${#fields.hasErrors('shortDescription')}"
+                  class="text-danger"
+                  th:errors="*{shortDescription}"
+                ></p>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Content</label>
+                <textarea
+                  class="form-control"
+                  id="content"
+                  th:field="*{content}"
+                  placeholder="enter the project content"
+                  rows="5"
+                >
+                </textarea>
+                <p
+                  th:if="${#fields.hasErrors('content')}"
+                  class="text-danger"
+                  th:errors="*{content}"
+                ></p>
+              </div>
+              <button type="submit">Create</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/classic/ckeditor.js"></script>
+    <script>
+      ClassicEditor.create(document.querySelector("#content"))
+        .then((editor) => {
+          console.log(editor);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>

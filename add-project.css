@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Share Tech", sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+/* header */
+.header{
+    all: unset;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    background-color: #bd9c4d;
+}
+
+.header header{
+    user-select: none;
+}
+
+.header .logout a{
+    text-decoration: none;
+    font-size: 19px;
+    color: #000;
+    padding: 10px 30px;
+    box-shadow: 0px 0px 3px 1px #000;
+}
+
+.container{
+    margin-top: 30px;
+}
+
+.container .card-header{
+    width: 100%;
+    background-color: #bd9c4d;
+}
+
+.container  .card .card-body button[type="submit"]{
+    background-color: #bd9c4d;
+    min-width: 150px;
+    padding : 10px 40px;
+    outline: none;
+    border: 0;
+}
