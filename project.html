@@ -58,7 +58,37 @@
           aliquam? Nihil quia nobis eaque nam deserunt, id odit nemo, explicabo
           asperiores perferendis nisi ducimus accusamus provident dicta illum!
           Reiciendis, quae dolor. Laborum labore illum commodi.
-
+          <h2 class="mb-4">Dynamic Table Form</h2>
+      <table id="dataTable" class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Term Name 1</th>
+            <th>Term Value</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                name="column1[]"
+                placeholder="Term Name"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                name="column2[]"
+                placeholder="value"
+              />
+            </td>
+            <td><button class="btn btn-success add-row">Add Row</button></td>
+          </tr>
+        </tbody>
+      </table>
           <table class="table table-striped table-hover table-bordered">
             <thead class="table-dark">
               <th style="width: 10%">#</th>
@@ -90,5 +120,49 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        console.log("jQuery loaded");
+
+        $("#dataTable tbody").on("click", ".add-row", function (e) {
+          e.preventDefault();
+          console.log("Add Row button clicked");
+
+          let $row = $(this).closest("tr");
+          let newRow = $row.clone(true).find("input").val("").end();
+          newRow.find(".add-row").remove();
+
+          $row.after(newRow);
+
+          console.log("New row added");
+        });
+
+        // Initialize the table with at least one row
+        $(function () {
+          let rowCount = 1;
+          let newRow = $("<tr>").attr("id", "row_" + rowCount);
+          let cell1 = $("<td>").append(
+            $("<input>").attr({
+              type: "text",
+              class: "form-control",
+              name: "column1[]",
+            })
+          );
+          let cell2 = $("<td>").append(
+            $("<input>").attr({
+              type: "text",
+              class: "form-control",
+              name: "column2[]",
+            })
+          );
+
+          newRow.append(cell1).append(cell2);
+
+          $("#dataTable tbody").append(newRow);
+        });
+      });
+    </script>
   </body>
 </html>
