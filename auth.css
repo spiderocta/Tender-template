@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: "Share Tech", sans-serif;
+    box-sizing: border-box;
 }
 
 /* colors :: 
@@ -103,9 +104,10 @@ body {
 .container form .form-body label input{
     width: 100%;
     font-size: 15px;
-    border: 1px solid #0a2e4c;
+    /* border: 1px solid #0a2e4c; */
+    border: none;
     outline: none;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     padding: 8px 8px;
 }
 
