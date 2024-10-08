@@ -106,6 +106,10 @@ a{
     font-size: 20px;
 }
 
+.container .content .projects .search .actions .item:hover,
+.container .content .projects .search button:hover{
+    background-color: #997011;
+}
 
 .container .content .projects .search .search-box input{
     width: 35%;
