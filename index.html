@@ -3,173 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
-    <title>Tender</title>
+    <link rel="stylesheet" href="auth.css">
+    <title>Document</title>
   </head>
   <body>
     <div class="container">
-      <!-- header -->
-      <div class="header">
-        <header>
-          <h1>Tender</h1>
-        </header>
-        <div class="logout">
-          <p><a href="">Logout</a></p>
+        <div class="header">
+            <h1>Tender</h1>
         </div>
-      </div>
-
-      <!-- content -->
-      <div class="content">
-        <!-- projects section-->
-        <div class="projects">
-          <div class="search">
-            <div class="search-box">
-              <input type="text">
-              <button>search</button>
-            </div>
-            <div class="actions">
-              <a href="add-project.html">
-              <div class="item">
-                + add project
-              </div>
-              </a>
-              <a href="projects.html">
-              <div class="item">
-                manage current projects
-              </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="cards">
-
-            <div class="card">
-              <div class="head">
-                <h2>Project 1</h2>
-              </div>
-              <div class="body">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor sit amet consectetur
-                  Lorem, ipsum dolor sit amet consectetur 
-                </p>
-              </div>
-              <div class="tail">
-                <a href="project.html">see details</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="head">
-                <h2>Project 2</h2>
-              </div>
-              <div class="body">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor sit amet consectetur
-                  Lorem, ipsum dolor sit amet consectetur 
-                </p>
-              </div>
-              <div class="tail">
-                <a href="project.html">see details</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="head">
-                <h2>Project 3</h2>
-              </div>
-              <div class="body">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor sit amet consectetur
-                  Lorem, ipsum dolor sit amet consectetur 
-                </p>
-              </div>
-              <div class="tail">
-                <a href="project.html">see details</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="head">
-                <h2>Project 4</h2>
-              </div>
-              <div class="body">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor sit amet consectetur
-                  Lorem, ipsum dolor sit amet consectetur 
-                </p>
-              </div>
-              <div class="tail">
-                <a href="project.html">see details</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="head">
-                <h2>Project 5</h2>
-              </div>
-              <div class="body">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor sit amet consectetur
-                  Lorem, ipsum dolor sit amet consectetur 
-                </p>
-              </div>
-              <div class="tail">
-                <a href="project.html">see details</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="head">
-                <h2>Project 6</h2>
-              </div>
-              <div class="body">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Lorem, ipsum dolor sit amet consectetur
-                  Lorem, ipsum dolor sit amet consectetur 
-                </p>
-              </div>
-              <div class="tail">
-                <a href="project.html">see details</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- manager section -->
-
-        <!-- <div class="actions">
-            <div class="nav-header">
-                Actions
-            </div>
-            <div class="nav-items">
-                <a href="">
-                    <div class="nav-item">
-                    Add a new Project
+        <form action="" >
+            <p class="head">Sign up</p>
+            <div class="form-body">
+                <label for="firstname">
+                    First Name
+                    <input type="text" name="firstName">
+                </label>
+                <label for="firstname">
+                    Last Name
+                    <input type="text" name="lastName">
+                </label>
+                <label for="firstname">
+                    Email
+                    <input type="email" name="email">
+                </label>
+                <label for="firstname">
+                    Password
+                    <input type="password" name="Password">
+                </label>
+                <div class="actions">
+                    <button type="submit" value="submit"><a href="main.html">sign up</a></button>
+                    <span class="text">Already registered? &nbsp;<a href="login.html">Login here</a></span>
                 </div>
-                </a>
-                <a href="">
-                    <div class="nav-item">
-                    Manage Current Projects
-                </div>
-                </a>
             </div>
-        </div> -->
-        <!-- end of manager -->
-
-      </div>
+        </form>
     </div>
   </body>
 </html>
